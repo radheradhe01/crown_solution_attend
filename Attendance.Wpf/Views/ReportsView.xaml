@@ -4,10 +4,10 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Spacing="8">
-            <DatePicker/>
-            <DatePicker/>
-            <Button Content="Generate" Width="100" Click="OnGenerate"/>
+        <StackPanel Orientation="Horizontal">
+            <DatePicker Margin="0,0,8,0"/>
+            <DatePicker Margin="0,0,8,0"/>
+            <Button Content="Generate" Width="100" Click="OnGenerate" Margin="0,0,8,0"/>
             <Button Content="Export Excel" Width="120" Click="OnExport"/>
         </StackPanel>
         <DataGrid Grid.Row="1" Margin="0,8,0,0" AutoGenerateColumns="True"/>

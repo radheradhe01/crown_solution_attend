@@ -4,8 +4,8 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Spacing="8">
-            <Button Content="Login" Width="100"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Login" Width="100" Margin="0,0,8,0"/>
             <Button Content="Logout" Width="100"/>
         </StackPanel>
         <DataGrid Grid.Row="1" Margin="0,8,0,0" AutoGenerateColumns="True"/>

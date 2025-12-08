@@ -4,9 +4,9 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <StackPanel Orientation="Horizontal" Spacing="8">
-            <Button Content="Add" Width="100"/>
-            <Button Content="Edit" Width="100"/>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Add" Width="100" Margin="0,0,8,0"/>
+            <Button Content="Edit" Width="100" Margin="0,0,8,0"/>
             <Button Content="Remove" Width="100"/>
         </StackPanel>
         <DataGrid Grid.Row="1" Margin="0,8,0,0" AutoGenerateColumns="True"/>

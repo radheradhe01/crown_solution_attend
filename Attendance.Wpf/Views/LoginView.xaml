@@ -5,9 +5,9 @@
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TextBox Grid.Row="0" Margin="0,0,0,8" x:Name="Username" PlaceholderText="Username"/>
+        <TextBox Grid.Row="0" Margin="0,0,0,8" x:Name="Username"/>
         <PasswordBox Grid.Row="1" Margin="0,0,0,8" x:Name="Password"/>
-        <StackPanel Grid.Row="2" Orientation="Horizontal" Spacing="8">
+        <StackPanel Grid.Row="2" Orientation="Horizontal">
             <Button Content="Login" Width="100" Click="OnLogin"/>
         </StackPanel>
     </Grid>
