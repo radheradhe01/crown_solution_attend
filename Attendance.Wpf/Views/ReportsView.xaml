@@ -1,0 +1,15 @@
+<UserControl x:Class="Attendance.Wpf.Views.ReportsView" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <StackPanel Orientation="Horizontal" Spacing="8">
+            <DatePicker/>
+            <DatePicker/>
+            <Button Content="Generate" Width="100" Click="OnGenerate"/>
+            <Button Content="Export Excel" Width="120" Click="OnExport"/>
+        </StackPanel>
+        <DataGrid Grid.Row="1" Margin="0,8,0,0" AutoGenerateColumns="True"/>
+    </Grid>
+</UserControl>

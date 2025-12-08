@@ -1,0 +1,33 @@
+name: Build Windows WPF
+
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup .NET 6 SDK
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '6.0.x'
+
+      - name: Restore
+        run: dotnet restore
+
+      - name: Publish (self-contained single exe)
+        run: >
+          dotnet publish Attendance.Wpf/Attendance.Wpf.csproj -c Release -r win-x64
+          --self-contained true /p:PublishSingleFile=true
+          /p:IncludeNativeLibrariesForSelfExtract=true /p:EnableCompressionInSingleFile=true
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: AttendanceApp-win-x64
+          path: Attendance.Wpf/bin/Release/net6.0-windows/win-x64/publish/

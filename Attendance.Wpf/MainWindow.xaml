@@ -1,0 +1,22 @@
+<Window x:Class="Attendance.Wpf.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Attendance" Height="600" Width="900">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Login">
+                <views:LoginView xmlns:views="clr-namespace:Attendance.Wpf.Views" />
+            </TabItem>
+            <TabItem Header="Users">
+                <views:UsersView xmlns:views="clr-namespace:Attendance.Wpf.Views" />
+            </TabItem>
+            <TabItem Header="Attendance">
+                <views:AttendanceView xmlns:views="clr-namespace:Attendance.Wpf.Views" />
+            </TabItem>
+            <TabItem Header="Reports">
+                <views:ReportsView xmlns:views="clr-namespace:Attendance.Wpf.Views" />
+            </TabItem>
+            <TabItem Header="Settings">
+                <views:SettingsView xmlns:views="clr-namespace:Attendance.Wpf.Views" />
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>
+
