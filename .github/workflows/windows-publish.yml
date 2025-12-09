@@ -14,10 +14,10 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Setup .NET 6 SDK
+      - name: Setup .NET 8 SDK
         uses: actions/setup-dotnet@v4
         with:
-          dotnet-version: '6.0.x'
+          dotnet-version: '8.0.x'
 
       - name: Restore
         run: dotnet restore Attendance.sln
@@ -32,4 +32,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: AttendanceApp-win-x64
-          path: Attendance.Wpf/bin/Release/net6.0-windows/win-x64/publish/
+          path: Attendance.Wpf/bin/Release/net8.0-windows/win-x64/publish/
